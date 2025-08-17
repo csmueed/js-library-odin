@@ -9,6 +9,7 @@ const pages = document.querySelector("#pages");
 const read = document.querySelector("#read");
 
 const clearLC = document.querySelector(".clearLC");
+const closeBtn = document.querySelector("#close");
 
 let myLibrary = [];
 
@@ -76,10 +77,24 @@ addButton.addEventListener("click", () => {
 formClass.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  addBookToLibrary(bookName.value, authorName.value, pages.value, read.checked);
+  if (
+    bookName.value.trim() === "" ||
+    authorName.value.trim() === "" ||
+    pages.value.trim() === ""
+  ) {
+    alert("⚠️ Please fill in all fields before adding a book.");
+    return;
+  } else {
+    addBookToLibrary(
+      bookName.value,
+      authorName.value,
+      pages.value,
+      read.checked
+    );
 
-  formClass.reset();
-  lineContainer.classList.remove("show");
+    formClass.reset();
+    lineContainer.classList.remove("show");
+  }
 });
 
 function saveLibrary() {
@@ -100,4 +115,8 @@ renderBooks();
 
 clearLC.addEventListener("click", function (e) {
   localStorage.removeItem("library");
+});
+
+closeBtn.addEventListener("click", function (e) {
+  lineContainer.classList.remove("show");
 });
