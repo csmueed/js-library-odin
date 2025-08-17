@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic Library Project - TOP</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <h1>
+        JavaScript Library Project
+    </h1>
+    <button class="add-book">Add a New Book</button>
+    <div class="form-container">
+        <form class="formClass">
+            <div class="line-container">
+                <div class="line1 line">
+                    <label for="book-name">Book Name:</label>
+                    <input type="text" id="book-name">
+                </div>
+                <div class="line2 line">
+                    <label for="author-name">Author Name:</label>
+                    <input type="text" id="author-name">
+                </div>
+                <div class="line3 line">
+                    <label for="pages">Total Pages:</label>
+                    <input type="number" id="pages">
+                </div>
+                <div class="line4 line">
+                    <label for="read">Read Status: Already Read?</label>
+                    <input type="checkbox" id="read">
+                </div>
+                <div class="line5 line">
+                    <button class="final-add" type="submit">Add Book</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="book-container">
+
+    </div>
 </body>
 <script src="script.js"></script>
+
 </html>
