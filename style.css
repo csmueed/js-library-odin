@@ -81,6 +81,7 @@ input[type="checkbox"] {
 h1 {
     font-size: 3rem;
     margin: 1em;
+    margin-top: -3rem;
     color: red;
     font-weight: bolder;
 }
@@ -119,4 +120,16 @@ h1 {
     padding: 1rem;
     font-size: 1.8rem;
     border-radius: 1rem;
+}
+.LCitem {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.clearLC {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
 }
