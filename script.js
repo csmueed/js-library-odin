@@ -43,4 +43,28 @@ finalAdd.addEventListener("click", function (e) {
 
   formClass.reset();
   lineContainer.classList.remove("show");
+  renderBooks();
 });
+
+function renderBooks() {
+  bookContainer.innerHTML = "";
+  Library.forEach((item) => {
+    const card = document.createElement("div");
+    card.classList.add("book-card");
+    card.innerHTML = `<h2 class="title"><span class="titleStyle">Book Name:</span> ${item.myBookName}</h2>
+            <h3 class="author-title"><span class="authorStyle">Author Name:</span> ${item.myAuthorName}</h3>
+            <h3 class="pageFinal"><span class="pageStyle">Total Pages:</span> ${item.myTotalPages}</h3>
+            <h3 class="readStats"><span class="readStyle">Reading Status:</span> ${item.myReadStatus ? "Yes" : "No"}</h3>
+            <button class="remove">Remove Book</button>`;
+    bookContainer.appendChild(card);
+
+    const removeBtn = card.querySelector(".remove");
+    removeBtn.addEventListener("click", function () {
+      const index = Library.findIndex((b) => b.id === item.id); // find position
+      if (index !== -1) {
+        Library.splice(index, 1); // remove from array
+        renderBooks(); // refresh UI
+      }
+    });
+  });
+}
