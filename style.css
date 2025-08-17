@@ -84,7 +84,7 @@ h1 {
     color: red;
     font-weight: bolder;
 }
-.titleStyle {
+/* .titleStyle {
     color: red;
 }
 .authorStyle {
@@ -95,7 +95,7 @@ h1 {
 }
 .readStyle {
     color: rgb(165, 16, 16);
-}
+} */
 .remove {
     background-color: yellow;
     color: red;
@@ -103,6 +103,14 @@ h1 {
     padding: 0.60rem;
     font-size: 1rem;
     border-radius: 2rem;
+}
+.toggle-read{
+    background-color: red;
+   color: yellow;
+    border: 2px solid rgba(0, 0, 0, 0.866);
+    padding: 0.40rem;
+    font-size: 1rem;
+    border-radius: 1rem; 
 }
 .final-add {
     background-color: black;
